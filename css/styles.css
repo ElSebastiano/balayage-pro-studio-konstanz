@@ -266,45 +266,47 @@ button { font: inherit; cursor: pointer; }
   will-change: transform;
 }
 .blob-a {
-  width: 46vw; height: 46vw; max-width: 640px; max-height: 640px;
-  right: -12%; top: -14%;
+  width: 40vw; height: 40vw; max-width: 560px; max-height: 560px;
+  right: -14%; top: -16%;
   background: radial-gradient(circle at 35% 35%, var(--blonde), var(--champagne) 60%, transparent 75%);
+  opacity: 0.22;
+  mix-blend-mode: soft-light;
 }
-.blob-b {
-  width: 34vw; height: 34vw; max-width: 480px; max-height: 480px;
-  right: 4%; bottom: -10%;
-  background: radial-gradient(circle at 40% 40%, var(--caramel), rgba(168, 112, 66, 0) 70%);
-  opacity: 0.4;
-}
-.blob-c {
-  width: 26vw; height: 26vw; max-width: 380px; max-height: 380px;
-  right: 30%; top: 30%;
-  background: radial-gradient(circle at 50% 50%, var(--sage), rgba(101, 116, 109, 0) 72%);
-  opacity: 0.28;
-}
-.hero-strands {
+
+.hero-visual picture,
+.hero-photo {
   position: absolute;
-  right: 6%;
-  top: 8%;
-  bottom: 8%;
-  width: 44%;
-  min-width: 260px;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
-.strand {
+.hero-photo {
+  object-fit: cover;
+  object-position: 78% 32%;
+}
+.hero-scrim {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 15%;
-  border-radius: 999px;
-  background: linear-gradient(180deg, var(--blonde) 0%, var(--champagne) 45%, var(--caramel) 100%);
-  opacity: 0.5;
-  transform-origin: top center;
+  inset: 0;
+  background: linear-gradient(90deg,
+    var(--porcelain) 0%,
+    var(--porcelain) 30%,
+    rgba(246, 243, 237, 0.82) 42%,
+    rgba(246, 243, 237, 0.3) 56%,
+    rgba(246, 243, 237, 0) 68%
+  );
 }
-.strand.s1 { left: 2%;  width: 11%; height: 88%; opacity: 0.28; filter: blur(1px); transform: rotate(-3deg); }
-.strand.s2 { left: 21%; width: 17%; height: 100%; opacity: 0.52; transform: rotate(2deg); }
-.strand.s3 { left: 42%; width: 9%;  height: 82%; opacity: 0.36; filter: blur(0.5px); transform: rotate(-5deg); }
-.strand.s4 { left: 60%; width: 19%; height: 97%; opacity: 0.54; transform: rotate(3deg); }
-.strand.s5 { left: 83%; width: 13%; height: 78%; opacity: 0.26; filter: blur(1px); transform: rotate(-2deg); }
+@media (max-width: 720px) {
+  .hero-scrim {
+    background: linear-gradient(90deg,
+      var(--porcelain) 0%,
+      var(--porcelain) 8%,
+      rgba(246, 243, 237, 0.9) 40%,
+      rgba(246, 243, 237, 0.55) 58%,
+      rgba(246, 243, 237, 0.15) 78%
+    );
+  }
+  .hero-photo { object-position: 82% 26%; }
+}
 
 .hero-grain {
   position: absolute;
@@ -574,16 +576,24 @@ h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
   position: relative;
   aspect-ratio: 4 / 5;
   height: 100%;
+  overflow: hidden;
   transition: transform 0.6s var(--ease);
 }
-.portfolio-card:nth-child(1) .portfolio-gradient { aspect-ratio: 16 / 11; }
-.portfolio-card:nth-child(6) .portfolio-gradient { aspect-ratio: 21 / 7; }
+.portfolio-gradient img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio-card:nth-child(1) .portfolio-gradient { aspect-ratio: 8 / 5; }
+.portfolio-card:nth-child(6) .portfolio-gradient { aspect-ratio: 12 / 5; }
 .portfolio-gradient::before {
   content: "";
   position: absolute; inset: 0;
   background-image: radial-gradient(rgba(255,255,255,0.5) 1px, transparent 1px);
   background-size: 5px 5px;
-  opacity: 0.25;
+  opacity: 0.12;
   mix-blend-mode: overlay;
 }
 .portfolio-gradient::after {
@@ -591,12 +601,6 @@ h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
   position: absolute; inset: 0;
   background: linear-gradient(180deg, rgba(32,37,34,0) 45%, rgba(32,37,34,0.62) 100%);
 }
-.grad-warm-caramel { background: linear-gradient(155deg, var(--blonde) 0%, var(--champagne) 45%, var(--caramel) 100%); }
-.grad-cool-blonde { background: linear-gradient(155deg, #EDE7D8 0%, #B9C4BC 55%, var(--sage) 100%); }
-.grad-champagne-glow { background: linear-gradient(155deg, var(--porcelain) 0%, var(--blonde) 60%, var(--champagne) 100%); }
-.grad-root-smoke { background: linear-gradient(155deg, var(--charcoal) 0%, var(--sage) 60%, var(--blonde) 100%); }
-.grad-honey-bronde { background: linear-gradient(155deg, var(--champagne) 0%, var(--caramel) 65%, var(--charcoal) 100%); }
-.grad-porcelain-ash { background: linear-gradient(155deg, var(--white) 0%, #C9CEC7 55%, var(--sage-dark) 100%); }
 .portfolio-card figcaption {
   position: absolute;
   left: 0; right: 0; bottom: 0;

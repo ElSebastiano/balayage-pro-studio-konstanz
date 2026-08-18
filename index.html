@@ -65,17 +65,14 @@
 
   <!-- HERO -->
   <section class="hero" id="top">
-    <div class="hero-visual" aria-hidden="true">
+    <div class="hero-visual" aria-hidden="true" data-parallax="3">
+      <picture>
+        <source media="(max-width: 720px)" srcset="assets/img/hero-mobile.webp">
+        <source srcset="assets/img/hero.webp" type="image/webp">
+        <img class="hero-photo" src="assets/img/hero.jpg" alt="" loading="eager" fetchpriority="high">
+      </picture>
+      <span class="hero-scrim"></span>
       <span class="blob blob-a" data-parallax="6"></span>
-      <span class="blob blob-b" data-parallax="10"></span>
-      <span class="blob blob-c" data-parallax="4"></span>
-      <span class="hero-strands">
-        <span class="strand s1"></span>
-        <span class="strand s2"></span>
-        <span class="strand s3"></span>
-        <span class="strand s4"></span>
-        <span class="strand s5"></span>
-      </span>
       <span class="hero-grain"></span>
     </div>
 
@@ -244,27 +241,39 @@
 
       <div class="portfolio-grid">
         <figure class="portfolio-card">
-          <div class="portfolio-gradient grad-warm-caramel"></div>
+          <div class="portfolio-gradient">
+            <img src="assets/img/portfolio-1.webp" alt="Warmer Caramel-Balayage-Verlauf, Nahaufnahme" loading="lazy" width="1600" height="1000">
+          </div>
           <figcaption>Warm Caramel Balayage</figcaption>
         </figure>
         <figure class="portfolio-card">
-          <div class="portfolio-gradient grad-cool-blonde"></div>
+          <div class="portfolio-gradient">
+            <img src="assets/img/portfolio-3.webp" alt="Kühler Blond-Verlauf, Nahaufnahme" loading="lazy" width="900" height="1125">
+          </div>
           <figcaption>Cool Blonde Melt</figcaption>
         </figure>
         <figure class="portfolio-card">
-          <div class="portfolio-gradient grad-champagne-glow"></div>
+          <div class="portfolio-gradient">
+            <img src="assets/img/portfolio-2.webp" alt="Sanfter Champagne-Blond-Farbton, Nahaufnahme" loading="lazy" width="900" height="1125">
+          </div>
           <figcaption>Soft Champagne Glow</figcaption>
         </figure>
         <figure class="portfolio-card">
-          <div class="portfolio-gradient grad-root-smoke"></div>
+          <div class="portfolio-gradient">
+            <img src="assets/img/portfolio-4.webp" alt="Sanft auslaufender Ansatz, Farbverlauf-Nahaufnahme" loading="lazy" width="900" height="1125">
+          </div>
           <figcaption>Root Smoke Correction</figcaption>
         </figure>
         <figure class="portfolio-card">
-          <div class="portfolio-gradient grad-honey-bronde"></div>
+          <div class="portfolio-gradient">
+            <img src="assets/img/portfolio-5.webp" alt="Honigblonder Farbton, Nahaufnahme" loading="lazy" width="900" height="1125">
+          </div>
           <figcaption>Honey Bronde</figcaption>
         </figure>
         <figure class="portfolio-card">
-          <div class="portfolio-gradient grad-porcelain-ash"></div>
+          <div class="portfolio-gradient">
+            <img src="assets/img/portfolio-6.webp" alt="Heller, aschiger Farbverlauf, Nahaufnahme" loading="lazy" width="1800" height="750">
+          </div>
           <figcaption>Porcelain Ash Reset</figcaption>
         </figure>
       </div>

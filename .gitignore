@@ -7,3 +7,6 @@ _claude-launch.json
 Research/
 docs/
 ReferenceAssets/
+
+# Unbearbeitete Stock-Foto-Originale (Pexels) — nur die optimierten WebP in assets/img/ werden veröffentlicht
+assets/raw/
