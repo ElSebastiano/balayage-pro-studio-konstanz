@@ -484,10 +484,11 @@ h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); }
 .sc-2, .sc-4 { transform: translateY(28px); }
 .sc-2:hover, .sc-4:hover { transform: translateY(22px); }
 .swatch-gradient { width: 100%; height: 100%; }
-.grad-caramel { background: linear-gradient(150deg, var(--blonde) 0%, var(--champagne) 45%, var(--caramel) 100%); }
-.grad-blonde { background: linear-gradient(160deg, var(--porcelain) 0%, var(--blonde) 55%, var(--champagne) 100%); }
-.grad-correction { background: linear-gradient(155deg, var(--sage) 0%, var(--blonde) 60%, var(--champagne) 100%); }
-.grad-sage { background: linear-gradient(150deg, var(--charcoal) 0%, var(--sage) 55%, var(--blonde) 100%); }
+.swatch-gradient img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media (max-width: 900px) {
   .split-grid { grid-template-columns: 1fr; gap: 40px; }
