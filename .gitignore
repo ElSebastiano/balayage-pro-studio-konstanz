@@ -1,0 +1,9 @@
+# Interne Recherche-/Analyse-Dateien (nicht für den öffentlichen Kunden-Auftritt)
+00_Discovery_Auswahl.md
+Claude_Execution_Guardrails.md
+Intake_Summary.md
+project-manifest.json
+_claude-launch.json
+Research/
+docs/
+ReferenceAssets/
